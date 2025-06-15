@@ -90,10 +90,43 @@
 # by using while loop
 
  
-num = int(input("enter th number: "))
-while num>0:
-    print(num)
-    num-=1              #here num = num - 1
+# num = int(input("enter th number: "))
+# while num>0:
+#     print(num)
+#     num-=1              #here num = num - 1
+
+# real time example if there is gym trainer wnat to send motivation messsage to the multiple clients
+
+# clients = ["ramakant","Prasant","aakriti","ahuja"]
+
+# for client in clients:
+#     print(f"Hello {client}, keep pushing your limits into the gym!")
+
+
+# real time example You’re buying groceries, and you want to calculate the total bill from a list of items and their prices.
+
+# food = {
+#     "burger":100,
+#     "pizza":200,
+#     "noodles":200,
+#     "samosa":20
+# }
+# total=0
+# for i in food:
+
+#     print(i,"$",food[i])
+#     total+= food[i]
+
+# print(f"total bill amt :${total}")
+
+# taking input from user of graceries and try to generate bill
+grocery_items = {}
+input = int(input("how many items you want to enter:"))
+for i in range(input):
+     item= input(f"enter item name :")
+     price = int(input("enter the price :"))
+     grocery_items[item]=price
+     
 
 
 
