@@ -82,13 +82,18 @@
 
 # by taking input from user
 
-n=int(input())
+# n=int(input())
 
-for i in range(n,0,-1):
-    print(i)
+# for i in range(n,0,-1):
+#     print(i)
 
+# by using while loop
 
-
+ 
+num = int(input("enter th number: "))
+while num>0:
+    print(num)
+    num-=1              #here num = num - 1
 
 
 
