@@ -119,14 +119,18 @@
 
 # print(f"total bill amt :${total}")
 
-# taking input from user of graceries and try to generate bill
-grocery_items = {}
-input = int(input("how many items you want to enter:"))
-for i in range(input):
-     item= input(f"enter item name :")
-     price = int(input("enter the price :"))
-     grocery_items[item]=price
-     
+
+food = {
+    "pizza": 100,
+    "burger":200,
+    "panner":250,
+    "samosa":300,
+}
+target = 0
+for i in food:
+    print(i ,"$",food[i])
+    target += food[i]
+print(f"final bill amt :${target}")
 
 
 
