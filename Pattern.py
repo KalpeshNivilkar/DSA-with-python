@@ -38,14 +38,38 @@
 #         print("*",end="")
 #     print("")
 
+
+
+# for i in range(10):
+#     print()
+
 # size= 10
 # for i in range(size):
 #     print("*" * size)
 
-# size= 10
+size= 5
+for i in range(size):
+    print("*" * (i+1))
+
+# output
+# *
+# **
+# ***
+# ****
+# *****
+
+
+# size= 5
 # for i in range(size):
-#     print("*" * (i+1))
-    
+#     print("*"*(size-i))
+
+
+# output
+# *****
+# ****
+# ***
+# **
+# *
 
 
         
