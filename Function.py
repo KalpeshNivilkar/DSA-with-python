@@ -62,16 +62,23 @@
 
 
 
-print("printing the given number is even or odd")
+# print("printing the given number is even or odd")
 
-def check(num):
-    if num % 2 == 0:
-        print("the given num is even")
-    elif num % 3 == 0:
-        print("the given num is odd")
-    else:
-        print("gives valid input")
-        print("type again")
-#user input
-n=int(input("Enter any number: "))
-check(n)
+# def check(num):
+#     if num % 2 == 0:
+#         print("the given num is even")
+#     elif num % 3 == 0:                                                   #printing the given number is even or odd
+#         print("the given num is odd")
+#     else:
+#         print("gives valid input")
+#         print("type again")
+# #user input
+# n=int(input("Enter any number: "))
+# check(n)
+
+print("sending otp on mobile number")
+def otp_send(mobile_no):
+    print(f"sending otp on mobile number :{mobile_no}")
+
+number = int(input("enter your mobile number :"))
+otp_send(number)
