@@ -104,33 +104,34 @@
 
 
 # real time example You’re buying groceries, and you want to calculate the total bill from a list of items and their prices.
-
 # food = {
-#     "burger":100,
-#     "pizza":200,
-#     "noodles":200,
-#     "samosa":20
+#     "pizza": 100,
+#     "burger":200,
+#     "panner":250,
+#     "samosa":300,
 # }
-# total=0
+# target = 0
 # for i in food:
-
-#     print(i,"$",food[i])
-#     total+= food[i]
-
-# print(f"total bill amt :${total}")
+#     print(i ,"$",food[i])
+#     target += food[i]
+# print(f"final bill amt :${target}")
 
 
-food = {
-    "pizza": 100,
-    "burger":200,
-    "panner":250,
-    "samosa":300,
-}
-target = 0
-for i in food:
-    print(i ,"$",food[i])
-    target += food[i]
-print(f"final bill amt :${target}")
+
+# factorial number in loop 
+
+num = int(input("enter any number : "))
+fact = 1
+
+for i in range(1,num+1):
+    fact *= i
+print(f"The Factorial number of {num} is {fact}")
+
+
+
+
+
+
 
 
 
