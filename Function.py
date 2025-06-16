@@ -50,12 +50,28 @@
 # Bmi_cal(w,h)
 
 
-print("finding Factorial number!")
-def cal_f(num):
-    fact=1
-    for i in range(1,num+1):
-        fact *= i
-    print(f"the factorial number is :{fact}")
+# print("finding Factorial number!")
+# def cal_f(num):
+#     fact=1
+#     for i in range(1,num+1):                                         #factorial number
+#         fact *= i
+#     print(f"the factorial number is :{fact}")
 
-n=int(input("Enter any number :"))
-cal_f(n)
+# n=int(input("Enter any number :"))
+# cal_f(n)
+
+
+
+print("printing the given number is even or odd")
+
+def check(num):
+    if num % 2 == 0:
+        print("the given num is even")
+    elif num % 3 == 0:
+        print("the given num is odd")
+    else:
+        print("gives valid input")
+        print("type again")
+#user input
+n=int(input("Enter any number: "))
+check(n)
