@@ -10,8 +10,8 @@ print("welcome into reccursion series")    #Recursion एक ऐसी प्र
 # print(factorial(7))
 
 
-
-# def fibonacci(n):
+                                                   
+# def fibonacci(n):                                              # fibonacci series
 #     if n == 0:
 #         return 0
 #     elif n == 1:
@@ -23,14 +23,40 @@ print("welcome into reccursion series")    #Recursion एक ऐसी प्र
 
 
 
-def factorial(num):
+# def factorial(num):                                             # factorial number
+#     if num == 0:                                                # base case / condition if it is not present then recursion stack will overflow
+#         return 0
+#     elif num == 1:                                         
+#         return 1
+#     else:
+#         return num * factorial(num-1)
+
+# n = int(input("Enter any number : "))
+# factorial(n)
+# print(factorial(n))
+
+
+# practice question 1] write a recursion function  to calculate the sum of first n number
+
+# def calsum(num):
+#     if num == 0:
+#         return 0
+#     elif num == 1:
+#         return 1
+#     else:
+#         return num + calsum(num - 1)
+# n= int(input("enter any number : "))
+# print(calsum(n))
+
+
+# practice question 2] Print numbers from n to 1
+
+def rev_num(num):
     if num == 0:
         return 0
-    elif num == 1:
-        return 1
-    else:
-        return num * factorial(num-1)
 
-n = int(input("Enter any number : "))
-factorial(n)
-print(factorial(n))
+    else:
+        return  rev_num(num-1)
+
+n = int(input("enter any number : "))
+print(rev_num(n))
