@@ -11,12 +11,26 @@ print("welcome into reccursion series")    #Recursion एक ऐसी प्र
 
 
 
-def fibonacci(n):
-    if n == 0:
+# def fibonacci(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         n = fibonacci(n-1)+ fibonacci(n-2)
+
+# print(fibonacci(10))
+
+
+
+def factorial(num):
+    if num == 0:
         return 0
-    elif n == 1:
+    elif num == 1:
         return 1
     else:
-        n = fibonacci(n-1)+ fibonacci(n-2)
+        return num * factorial(num-1)
 
-print(fibonacci(10))
+n = int(input("Enter any number : "))
+factorial(n)
+print(factorial(n))
