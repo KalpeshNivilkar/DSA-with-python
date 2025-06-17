@@ -54,9 +54,8 @@ print("welcome into reccursion series")    #Recursion एक ऐसी प्र
 def rev_num(num):
     if num == 0:
         return 0
-
-    else:
-        return  rev_num(num-1)
-
+    print(num)
+    rev_num(num-1)
+    
 n = int(input("enter any number : "))
 print(rev_num(n))
