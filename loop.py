@@ -120,12 +120,16 @@
 
 # factorial number in loop 
 
-num = int(input("enter any number : "))
-fact = 1
+# num = int(input("enter any number : "))
+# fact = 1
 
-for i in range(1,num+1):
-    fact *= i
-print(f"The Factorial number of {num} is {fact}")
+# for i in range(1,num+1):
+#     fact *= i
+# print(f"The Factorial number of {num} is {fact}")
+
+
+# fibonacci in loop
+
 
 
 
