@@ -35,3 +35,7 @@ print(sum)
 #     mylist[i] = int(mylist[i])
 
 # print(mylist)
+
+
+mylist = ["kalpesh","avinash"]
+print(mylist)
