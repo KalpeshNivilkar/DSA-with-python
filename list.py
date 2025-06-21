@@ -105,18 +105,52 @@
 
 # 6] taking input from user and print min and max value 
 
-n = int(input("how much element you wanna add :"))
-myList = []
+# n = int(input("how much element you wanna add :"))
+# myList = []
 
-for i in range(n):
-    num = int(input(f"enter the number : "))
-    myList.append(num)
+# for i in range(n):
+#     num = int(input(f"enter the number : "))
+#     myList.append(num)
 
-print(f" list is : {myList}")
-maximum_Num = max(myList)
-minimum_Num = min(myList)
-print(f" maximum number is : {maximum_Num}")
-print(f" minimum number is : {minimum_Num}")
+# print(f" list is : {myList}")
+# maximum_Num = max(myList)
+# minimum_Num = min(myList)
+# print(f" maximum number is : {maximum_Num}")
+# print(f" minimum number is : {minimum_Num}")
+
+
+# 7] find mean ,median,and mode 
+
+# m = int(input("How much number you wanna add into list :"))
+# myList = []
+# sum = 0
+
+# for i in range(m):
+#     num = int(input(f"enter the number :"))
+#     myList.append(num)
+#     sum += num
+
+# print(myList)
+# print(f"sum of list : {sum}")
+# listLength = len(myList)
+
+# mean = sum / listLength
+# print(f"mean of list : {mean}")
+
+
+# by importing statistic 
+
+import statistics
+
+list = [12,23,34,45,56,67,78,89,90]
+
+mean = statistics.mean(list)
+print(mean)
+
+
+
+
+
 
 
 
