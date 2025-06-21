@@ -83,10 +83,41 @@
 # print(findLargestNumber)
 
 # 4] Count how many times a number appears in a list.
-list = [1, 2, 2, 3, 2]
-countlist = list.count(2)
-print(countlist)
+
+# list = [1, 2, 2, 3, 2]
+
+# countlist = list.count(2)
+# print(countlist)
     
+
+# 5] taking input for list from user and finding sum of the
+# n = int(input("how much element you want take :"))
+# mylist = []
+# sum = 0
+# for i in range(n):
+#     num = int(input(f"enter the number :"))
+#     mylist.append(num)
+#     sum += num
+
+# print(mylist)
+# print(sum)
+      
+
+# 6] taking input from user and print min and max value 
+
+n = int(input("how much element you wanna add :"))
+myList = []
+
+for i in range(n):
+    num = int(input(f"enter the number : "))
+    myList.append(num)
+
+print(f" list is : {myList}")
+maximum_Num = max(myList)
+minimum_Num = min(myList)
+print(f" maximum number is : {maximum_Num}")
+print(f" minimum number is : {minimum_Num}")
+
 
 
 
