@@ -140,12 +140,30 @@
 
 # by importing statistic 
 
+# import statistics
+
+# list = [12,23,34,45,56,67,78,89,90]
+
+# mean = statistics.mean(list)
+# print(mean)
+
+# find median of list 
+# import statistics
+# my_list = [12,23,34,45,100,56,67,78,89,90]
+
+# list = statistics.median(my_list)
+# print(list)
+
+
+# find mode 
+
 import statistics
+my_list = [12,23,34,45,100,56,67,78,89,90]
 
-list = [12,23,34,45,56,67,78,89,90]
+list = statistics.mode(my_list)
+print(list)
 
-mean = statistics.mean(list)
-print(mean)
+
 
 
 
