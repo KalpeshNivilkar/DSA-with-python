@@ -2,17 +2,17 @@
 
 # for example 
 
-n = int(input())
-m = int(input())
+# n = int(input())
+# m = int(input())
 
-grid= []
-for i in range(n):
-    item  = [ele for ele in input().split()]
-    grid.append(item)
+# grid= []
+# for i in range(n):
+#     item  = [ele for ele in input().split()]
+#     grid.append(item)
 
-print(grid)
+# print(grid)
 
-# for example 
+# for practicingf
 
 # n = int(input())
 # m = int(input())
@@ -23,6 +23,11 @@ print(grid)
 #     grid.append(item)
 
 # print(grid)
+
+n =5244
+
+for i in range(n):
+    print(i)
 
 
 

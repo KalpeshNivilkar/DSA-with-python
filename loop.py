@@ -131,6 +131,17 @@
 # fibonacci in loop
 
 
+n = 5244
+total = 1
+
+for i in str(n):
+    total *= int(i)
+
+print(total)
+
+# output will be : 160
+# which is 5*2*4*4     
+     
 
 
 
