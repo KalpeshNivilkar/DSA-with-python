@@ -76,7 +76,29 @@ print(yourSelf.strip())
 
 # ASCII value 
 
-me = "a"
-print(ord(me))
+# me = "a"
+# print(ord(me))
 
 
+# practice question 
+# check palindrom 
+
+# text = input("Enter the text : ")
+
+# if text == text[::-1]:
+#     print("the text is palidrom")
+# else:
+#     print("text is no palidrome")
+
+
+
+
+# find num 5244 = 5*2*4*4
+
+num = 5244
+total = 1
+
+for i in str(num):
+    total *= int(i)
+
+print(total)
