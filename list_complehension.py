@@ -17,3 +17,6 @@ print(myList)
 
 myList = [int(ele)*2 for ele in input().split() ]
 print(myList)
+
+# give input as : 10 45 78 23 56
+# output will be : [20, 90, 156, 46, 112]

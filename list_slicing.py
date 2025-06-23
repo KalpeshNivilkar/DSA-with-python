@@ -12,3 +12,5 @@ print(myList[1:len(myList):2])
 
 yourList = [10,20,30,40,50]
 print(yourList[::-1])
+
+# output will be :[50, 40, 30, 20, 10] list_complehension.py
