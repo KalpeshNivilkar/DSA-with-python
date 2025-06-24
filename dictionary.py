@@ -25,3 +25,15 @@ dict = {"table": ["a piece of furniture","list of fact and figure"],
         "cat":"a small animal"}
 
 print(dict)
+
+# practise question 
+
+n = int(input("hoow much sub store :"))
+dict = {}
+for i in range(n):
+    sub = input("enter the sub :")
+    marks = input("enter the marks :")
+    dict[sub] = marks
+print(dict)
+
+
