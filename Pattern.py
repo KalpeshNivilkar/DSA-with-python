@@ -47,9 +47,9 @@
 # for i in range(size):
 #     print("*" * size)
 
-size= 5
-for i in range(size):
-    print("*" * (i+1))
+# size= 5
+# for i in range(size):
+#     print("*" * (i+1))
 
 # output
 # *
@@ -71,5 +71,8 @@ for i in range(size):
 # **
 # *
 
+
+for i in range(4):
+    print(i*i)
 
     
