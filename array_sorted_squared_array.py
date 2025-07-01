@@ -13,15 +13,26 @@
 # print(sorted_squared_array(arr))
 
 
-def sorted_squared_array(x):
-    new_array = []
-    for i in x:
-        i = i * i
+# def sorted_squared_array(x):
+#     new_array = []
+#     for i in x:
+#         i = i * i
+#         new_array.append(i)
+#     new_array.sort()
+#     return new_array
+
+# arr = [10,20,30,40]
+# print(sorted_squared_array(arr))
+       
+        
+def square_arr(array):
+    new_array =[]
+    for i in array:
+        i = i* i
         new_array.append(i)
     new_array.sort()
     return new_array
 
-arr = [10,20,30,40]
-print(sorted_squared_array(arr))
-       
-        
+arr = [10,20,40,30]
+print(square_arr(arr))
+    
