@@ -104,16 +104,44 @@
 # print(total)
 
 
-name = "kalpesh"
-lenofname = len(name)
-print(lenofname)
+# name = "kalpesh"
+# lenofname = len(name)
+# print(lenofname)
 
 #accessing name index
 
-access = name[1]
-print(access)
+# access = name[1]
+# print(access)
 
-#slice name
+# #slice name
 
-slicename = name[1 : 4]
-print(slicename)
+# slicename = name[1 : 4]
+# print(slicename)
+
+# # Given s = "Python is fun", print first character, last character, and substring "fun".
+
+# s = "python is fun"
+
+# print(s[0])
+# print(s[-1])
+# print(s[-3:])
+
+# Reverse a string using slicing.
+
+# schoolname = "poladpur"
+
+# print(schoolname[::-1])
+
+# Check if a string is a palindrome.
+
+# name = "madam"
+# if name == name[:: -1]:
+#     print("the name is palindrome" + " " + name)
+# else:
+#     print("this is not palindrime" + name)
+
+# Replace all spaces in "Python is awesome" with "-".
+
+sentence = "python is awesome"
+
+print(sentence.replace(" ", "-"))
