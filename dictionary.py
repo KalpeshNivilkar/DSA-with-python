@@ -40,10 +40,11 @@ n = int(input("how much sub you have to store"))
 
 dict = {}
 for i in range(n):
-    sub = input("enter the sub")
-    marks = input("enter the marks")
+    sub = input("enter the sub ")
+    marks = input("enter the marks ")
 
     dict[sub] = marks
 print(dict)
 
-
+for avarageMarks in marks:
+    print([marks])
