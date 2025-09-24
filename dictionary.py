@@ -46,5 +46,4 @@ for i in range(n):
     dict[sub] = marks
 print(dict)
 
-for avarageMarks in marks:
-    print([marks])
+
