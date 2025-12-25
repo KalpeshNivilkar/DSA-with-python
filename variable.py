@@ -38,3 +38,10 @@ marks3 = 90
 avarage = (marks1 +marks2+ marks3)/3
 
 print(avarage)
+
+
+
+name = "kalpesh"
+isPass = True
+age = 21
+add = "pune"
