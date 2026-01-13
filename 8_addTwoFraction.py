@@ -7,6 +7,7 @@ def addTwoFraction():
     numerator = (a * d) + (b * c)
     denometor = (b * d)
 
-    result = numerator / denometor
-    print(result)
+    # result1 = numerator / denometor
+    result2 = ("the result = {}/{}".format(numerator,denometor))
+    print(result2)
 addTwoFraction()
