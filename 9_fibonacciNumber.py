@@ -1,3 +1,4 @@
+# Brute force approach
 '''def fibonacciNumber(num):#as a limit
     a = 0
     b = 1
@@ -10,11 +11,21 @@
 fibonacciNumber(10)'''
 
 
-
-def fibonacciNumber(num):
+# optimized Approach
+"""def fibonacciNumber(num):
     if num <= 1:
         return num
     else:
         return fibonacciNumber(num - 1) + fibonacciNumber(num - 2)
 
-print(fibonacciNumber(6))
+print(fibonacciNumber(6))"""
+
+
+def fibonacciNumber(n):
+    if n <= 1:
+        return 1
+    
+    else:
+        return fibonacciNumber(n-1) + fibonacciNumber(n-2)
+    
+print(fibonacciNumber(19))

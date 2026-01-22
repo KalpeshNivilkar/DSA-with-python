@@ -57,6 +57,9 @@ print(maxsum(arr))  """""
 
 
 
+
+
+
 def maxsum(num):
     cursum = 0
     maxsum = float('-inf')
@@ -68,5 +71,5 @@ def maxsum(num):
         if cursum < 0:
             cursum = 0
     return maxsum
-arr = [10,22,-11,11,2,3]
-print (maxsum(arr))
+arr = [10,22,-11,11,2,3] 
+print(maxsum(arr))
