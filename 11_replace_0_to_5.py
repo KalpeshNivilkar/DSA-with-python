@@ -45,3 +45,21 @@ def replace_number(num):
         num //= 10
     return result
 print(replace_number(1000))
+
+
+def replace_number(num):
+    if num == 0:
+        return 5
+    result = 0
+    place = 1
+
+    while num > 0:
+        digit = num % 10
+        if digit == 0:
+            digit = 5
+        
+        result += digit * place
+        place *= 10
+        num //= 10
+    return result
+print(replace_number(280))
