@@ -60,16 +60,34 @@ print(maxsum(arr))  """""
 
 
 
-def maxsum(num):
+'''def maxsum(num):
     cursum = 0
     maxsum = float('-inf')
 
     for i in num:
-        cursum += 1
+        cursum += i
         maxsum = max(cursum,maxsum)
 
         if cursum < 0:
             cursum = 0
     return maxsum
 arr = [10,22,-11,11,2,3] 
+print(maxsum(arr))'''
+
+
+
+
+def maxsum(n):
+    currsum = 0
+    maxsum = float('-inf')
+
+    for i in n:
+        currsum += i
+        maxsum = max(currsum,maxsum)
+
+        if currsum < 0:
+            currsum = 0
+    return maxsum
+
+arr = [12,45,23,-12,-12]
 print(maxsum(arr))
