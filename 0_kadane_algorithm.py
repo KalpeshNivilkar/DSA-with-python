@@ -77,7 +77,7 @@ print(maxsum(arr))'''
 
 
 
-def maxsum(n):
+'''def maxsum(n):
     currsum = 0
     maxsum = float('-inf')
 
@@ -87,6 +87,23 @@ def maxsum(n):
 
         if currsum < 0:
             currsum = 0
+    return maxsum
+
+arr = [12,45,23,-12,-12]
+print(maxsum(arr))'''
+
+
+def maxsum(num):
+    currsum = 0
+    maxsum = float('-inf')
+
+    for i in num:
+        currsum += i
+        maxsum = max(currsum,maxsum)
+
+        if currsum < 0:
+            currsum = 0
+
     return maxsum
 
 arr = [12,45,23,-12,-12]
