@@ -21,13 +21,36 @@ fibonacciNumber(10)'''
 print(fibonacciNumber(6))"""
 
 
-def fibonacciNumber(n):
+"""def fibonacciNumber(n):
     if n <= 1:
         return 1
     
     else:
         return fibonacciNumber(n-1) + fibonacciNumber(n-2)
     
-print(fibonacciNumber(19))
+print(fibonacciNumber(19))"""
+
+
+def fibonacciNum(num):
+    memo = {}
+
+    def helper(num):
+        if num <= 1:
+            return num
+        
+        if num in memo:
+            return memo[num]
+        
+        memo[num] = helper(num-1) + helper(num-2)
+        return memo[num]
+
+    return helper(num)
+
+
+print(fibonacciNum(19))
+
+
+
+        
 
 
