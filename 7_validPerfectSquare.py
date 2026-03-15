@@ -19,7 +19,7 @@ print(validSquare(16))"""""
     
 
 def validSquare(num):
-    for i in range(0,int(num ** 0.5) + 1):
+    for i in range(1,int(num ** 0.5) + 1):
         if i * i == num:
             return True
           
