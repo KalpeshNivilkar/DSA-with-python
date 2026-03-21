@@ -22,7 +22,7 @@ def productOfArray(arr):
      
     right = 1
     for i in range(n-1,-1,-1):
-        ans[i] = right
+        ans[i] *= right
         right *= arr[i]
     return ans
 arr = [1,2,3,4]
