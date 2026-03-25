@@ -17,7 +17,7 @@ print(majorityElement(nums))
 def mEl(nums):
     d = dict()
     for i in range(len(nums)):
-        if i in d[nums]:
+        if nums[i] in d:
             d[nums[i]] += 1
         else:
             d[nums[i]] = 1

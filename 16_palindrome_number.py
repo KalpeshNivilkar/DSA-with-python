@@ -1,4 +1,4 @@
-
+"""
 def isPalindrome(x):
         
         
@@ -29,4 +29,20 @@ def palindrome(n):
         rev_num = rev_num * 10 + digit
         n = n // 10
     return original == rev_num
-print(palindrome(29))
+print(palindrome(29))"""
+
+def ispalindrome(num):
+    og_number = num
+    rev_number = 0
+    if num <= 0:
+        return False
+    while num > 0:
+        digit = num % 10
+        rev_number = rev_number * 10 + digit
+        num = num // 10
+    
+    if rev_number == og_number:
+        return True
+    return False
+num = 121
+print(ispalindrome(num))
