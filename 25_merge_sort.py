@@ -22,13 +22,11 @@ def merge(left, right):
             result.append(right[j])
             j += 1
 
-    # remaining elements
     result.extend(left[i:])
     result.extend(right[j:])
 
     return result
 
 
-# test
 arr = [5, 3, 4, 1]
 print(merge_sort(arr))
