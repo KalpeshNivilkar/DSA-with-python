@@ -20,3 +20,29 @@ def is_prime(n):
     return True
 print(is_prime(23))
 
+# check the nuber is prime or not 
+def prime_number(num):
+    count = 0
+    for i in range(1,num+1):
+        if num % i == 0:
+            count += 1
+    if count == 2:
+        return True
+    return False
+num = 36
+print(prime_number(num))    
+
+
+
+def prime(num):
+    count = 0
+    for i in range(1,int(num ** 0.5 + 1)):
+        if num % i == 0:
+            count += 1
+            if i != num // i:
+                count += 1
+    if count == 2:
+        return True
+    return False
+num = 36
+print(prime(num)) 
