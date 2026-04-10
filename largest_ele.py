@@ -26,3 +26,12 @@ def largeEl(arr):
     return large
 arr = [55,32,97,99,3,67]
 print(largestEl(arr))
+
+def largestEl(arr):
+    largest1 = 0
+    for i in range(len(arr)):
+        if arr[i] > largest1:
+            largest1 = arr[i]
+    return largest1
+arr = [55,32,97,99,3,67]
+print(largestEl(arr))
