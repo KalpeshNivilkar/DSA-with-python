@@ -68,3 +68,19 @@ for i in range(0,rows):
         else:
             print("*",end=" ")
     print()
+
+# print transposed of matrix
+nums = [
+    [1,2,3],
+    [4,5,6]
+]
+
+row = len(nums)     #2
+col = len(nums[0])  #3
+
+result = [[0] * row for _ in range(col)]
+print("before:",result)
+for i in range(row):
+    for j in range(col):
+        result[j][i] = nums[i][j]
+print("after",result)
