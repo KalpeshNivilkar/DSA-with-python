@@ -59,3 +59,32 @@ matrix = [
 
 setZeros(matrix)
 print(matrix)
+
+
+def set_matrix_zero(nums):
+    row = len(nums)
+    col = len(nums[0])
+
+    rowtrack = [[0]  for _ in range(row)]
+    coltrack = [[0]  for _ in range(col)]
+
+    for i in range(row):
+        for j in range(col):
+            if nums[i][j] == 0:
+                rowtrack[i] = -1
+                coltrack[j] = -1
+    
+    for i in range(row):
+        for j in range(col):
+            if rowtrack[i] == -1 or coltrack[j] == -1:
+                nums[i][j] = 0
+    return nums
+nums = [
+    [1, 2, 0],
+    [4, 5, 6],
+    [7, 0, 9]
+]
+
+set_matrix_zero(nums)
+print(nums)
+
