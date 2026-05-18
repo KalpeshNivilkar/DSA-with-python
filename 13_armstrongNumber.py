@@ -57,3 +57,20 @@ def armstrong_num(num):
     return False
 num = 371
 print(armstrong_num(num))
+
+
+def armstrong_num(num):
+    n = len(str(num))
+    power = n
+    og_num = num
+    sum = 0
+    while num > 0:
+        last_digit = num % 10
+        sum += last_digit ** power
+        num = num // 10
+    if sum == og_num:
+        return True
+    return False
+num = 153
+print(armstrong_num(num))
+        

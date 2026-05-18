@@ -23,3 +23,15 @@ def all_divisors(num):
 
 num = 36
 print(all_divisors(num))       
+
+
+def factorials(nums):
+    list = []
+    
+    for i in range(1,(int(nums * 0.5) + 1)):
+        if nums % i == 0:
+            list.append(i)
+    return list
+
+nums = 28
+print(factorials(nums))
