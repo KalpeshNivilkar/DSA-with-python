@@ -20,8 +20,8 @@ def binary_search(nums, target):
 
 
 # Example (binary search requires a sorted array)
-nums = [2, 5, 6, 4, 2, 3]
+nums = [2,3,5,7,8,10]
 target = 6
 
-sorted_nums = sorted(nums)
-print(binary_search(sorted_nums, target))
+
+print(binary_search(nums, target))
