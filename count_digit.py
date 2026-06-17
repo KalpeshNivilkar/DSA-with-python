@@ -1,9 +1,14 @@
-num = 9876353552
-count = 0
+# count digit
 
-n = num
-while n > 0:
-    last_digit = n % 10
-    count += 1
-    n = n // 10
-print(count)
+def count_digit(num):
+    freq = 0
+    n = num
+
+    while n > 0:
+        last_digit = n % 10
+        print(last_digit)
+        freq += 1
+        n = n // 10
+    return freq
+num = 121
+print(count_digit(num))
