@@ -62,3 +62,23 @@ def is_palindrome(num):
 
 num = 1213
 print(is_palindrome(num))
+
+
+
+
+# palindrome number
+
+def is_palindrome(num):
+    og_num = num
+    rev_num = 0
+
+    while num > 0:
+        last_digit = num % 10
+        rev_num = rev_num * 10 + last_digit
+        num = num // 10
+    
+    if rev_num == og_num:
+        return True
+    return False
+num = 121
+print(is_palindrome(num)) 
