@@ -35,3 +35,24 @@ def factorials(nums):
 
 nums = 28
 print(factorials(nums))
+
+# find all factors of number
+
+def find_factors(num):
+    list = []
+    for i in range(num):
+        if num % i == 0:
+            list.append(i)
+    return list
+nums = 28
+print(factorials(nums))
+
+
+def find_factors(num):
+    list = []
+    for i in range(1,(int(num * 0.5)+ 1)):
+        if num % i == 0:
+            list.append(i)
+    return list
+num = 28
+print(find_factors(num))

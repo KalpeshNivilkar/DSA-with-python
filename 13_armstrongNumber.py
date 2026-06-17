@@ -74,3 +74,24 @@ def armstrong_num(num):
 num = 153
 print(armstrong_num(num))
         
+
+
+
+# armstrong  number
+def is_armstong_number(num):
+    og_num = num
+    arm = 0
+    n = len(str(num))
+    power = n
+
+    while num > 0:
+        last_digit = num % 10
+        arm += last_digit ** n
+        num = num // 10
+    
+    if og_num == arm:
+        return True
+    return False
+num = 153
+print(is_armstong_number(num))
+
