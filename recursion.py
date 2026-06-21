@@ -80,6 +80,17 @@ def summ(sum,x,n):
 summ(0,1,5)
 
 
-    
- 
-    
+
+
+
+# Recursion
+count = 0
+def rec_fun():
+    if count == 4:
+        return
+    print("kalpesh")
+    count += 1
+    rec_fun()
+rec_fun()
+
+  
