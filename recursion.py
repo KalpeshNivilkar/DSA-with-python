@@ -1,91 +1,117 @@
-"""def re_num(num):
-    if num > 10:   # correct base case
-        return
-    print(num)
-    re_num(num + 1)
+# """def re_num(num):
+#     if num > 10:   # correct base case
+#         return
+#     print(num)
+#     re_num(num + 1)
 
-re_num(1)
+# re_num(1)
 
 
-# printing name 5 time 
-def print_name(name,count):
-    if count == 5:
-        return
-    print(name)
-    print_name(name,count + 1)
+# # printing name 5 time 
+# def print_name(name,count):
+#     if count == 5:
+#         return
+#     print(name)
+#     print_name(name,count + 1)
     
-print_name("kalpesh",0)
+# print_name("kalpesh",0)
 
-count = 0
-def count_name(name):
-    global count
-    if count == 5:
-        return
-    print(name)
-    count += 1
-    count_name(name)
+# count = 0
+# def count_name(name):
+#     global count
+#     if count == 5:
+#         return
+#     print(name)
+#     count += 1
+#     count_name(name)
 
-count_name('kal')
+# count_name('kal')
 
-def n_to_1(num):
-    if  num < 1:
-        return 
-    print(num)
-    n_to_1(num-1)
-n_to_1(10)"""
+# def n_to_1(num):
+#     if  num < 1:
+#         return 
+#     print(num)
+#     n_to_1(num-1)
+# n_to_1(10)"""
 
-count = 0
-def fun():
-    global count
-    if count == 4:
-        return
-    print("anirudha")
-    count += 1
-    fun()
-fun()
+# count = 0
+# def fun():
+#     global count
+#     if count == 4:
+#         return
+#     print("anirudha")
+#     count += 1
+#     fun()
+# fun()
 
-# print x to n time 
-def xToN(x,n):
-    if n == 0:
-        return
-    print(x)
-    xToN(x,n-1)
-xToN('kalpesh',5)
+# # print x to n time 
+# def xToN(x,n):
+#     if n == 0:
+#         return
+#     print(x)
+#     xToN(x,n-1)
+# xToN('kalpesh',5)
 
-# prinbt 1 to 10
+# # prinbt 1 to 10
 
-def oneToTen(el,v):
-    if el >= v:
-        return
+# def oneToTen(el,v):
+#     if el >= v:
+#         return
 
-    print(el)
-    oneToTen(el+1,v)
-oneToTen(1,10)
+#     print(el)
+#     oneToTen(el+1,v)
+# oneToTen(1,10)
 
 
-# sum of first n number
-def sum_n(n):
-    if n == 0:
-        return 0
-    return n + sum_n(n-1)
+# # sum of first n number
+# def sum_n(n):
+#     if n == 0:
+#         return 0
+#     return n + sum_n(n-1)
 
-print(sum_n(5))
+# print(sum_n(5))
    
 
-def summ(sum,x,n):
-    if x > n:
-        print(sum)
-        return
-    summ(sum+x,x+1,n)
-summ(0,1,5)
+# def summ(sum,x,n):
+#     if x > n:
+#         print(sum)
+#         return
+#     summ(sum+x,x+1,n)
+# summ(0,1,5)
 
 
 
 
 
-# Recursion
+# # Recursion
+# count = 0
+# def rec_fun():
+#     if count == 4:
+#         return
+#     print("kalpesh")
+#     count += 1
+#     rec_fun()
+# rec_fun()
+
+
 count = 0
 def rec_fun():
+    global count
+    print("kalpesh")
+    count += 1
+    if count == 4:
+        return
+    rec_fun()
+   
+(rec_fun())
+
+
+
+
+# print anirudha 4 times
+count = 0
+def rec_fun():
+    global count
     if count == 4:
         return
     print("kalpesh")
@@ -93,4 +119,22 @@ def rec_fun():
     rec_fun()
 rec_fun()
 
-  
+
+
+def rec(x,n):
+    if n == 0:
+        return
+    print(x)
+    rec(x,n-1)
+        
+(rec(15,3))
+
+
+# print 1 to n using recsion 
+
+def print1ton(i, n):
+    if i > n:
+        return
+    print(i)
+    print1ton(i+1,n)
+print1ton(1,10)
