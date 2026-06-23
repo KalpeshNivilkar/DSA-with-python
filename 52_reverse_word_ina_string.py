@@ -43,3 +43,20 @@ def rev_words(s):
     return(" ".join(new_s))
 s = "the sky is blue"
 print(rev_words(s))
+
+
+
+# reverse word in a string 
+def rev_word(s):
+    new_s = s.split()
+    n = len(new_s)
+    left = 0
+    right = n-1
+
+    while left <= right:
+        new_s[left],new_s[right] = new_s[right], new_s[left]
+        left += 1
+        right -= 1
+    return(" ".join(new_s))
+s = "the sky is blue"
+print(rev_word(s))
