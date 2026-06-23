@@ -1,0 +1,45 @@
+'''def reverse_word_in_string(s):
+    split_s = s.split()
+    n = len(split_s)
+    left = 0
+    right = n - 1
+    while left > right:
+        split_s[left] , split_s[right] = split_s[right],split_s[left]
+        left += 1
+        right -= 1
+    return split_s'''
+
+
+
+
+
+
+
+
+'''s = "the sky is blue"
+split_S = s.split()
+print(split_S)     # ['the', 'sky', 'is', 'blue']
+n = len(split_S)
+left = 0
+right = n - 1
+
+while left <= right:
+    split_S[left], split_S[right] = split_S[right],split_S[left]
+    left += 1
+    right -= 1
+print(split_S)'''
+
+
+def rev_words(s):
+    new_s = s.split()
+    n = len(new_s)
+    l = 0
+    r = n - 1
+
+    while l <= r:
+        new_s[l], new_s[r] = new_s[r], new_s[l]
+        l += 1
+        r -= 1
+    return(" ".join(new_s))
+s = "the sky is blue"
+print(rev_words(s))
