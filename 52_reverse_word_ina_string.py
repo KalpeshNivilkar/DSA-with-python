@@ -60,3 +60,19 @@ def rev_word(s):
     return(" ".join(new_s))
 s = "the sky is blue"
 print(rev_word(s))
+
+
+
+def rev_words(s):
+    s_new = s.split()
+    n = len(s_new)
+    left = 0
+    right = n - 1
+
+    while left <= right:
+        s_new[left], s_new[right] = s_new[right], s_new[left]
+        left += 1
+        right -= 1
+    return (" ".join(s_new))
+s = "the sky is blue"
+print(rev_words(s))
