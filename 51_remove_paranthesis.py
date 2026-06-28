@@ -122,3 +122,26 @@ def remove_parantheses(s):
     return result
 s = "((()))(())"
 print(remove_parantheses(s))
+
+
+
+
+def remove_parantheses(s):
+    if s == "":
+        return ""
+    count = 0
+    result = ""
+
+    for ch in s:
+        if ch == '(':
+            count += 1
+            if count > 1:
+                result += ch
+        else:
+            count -= 1
+            if count > 0:
+                result += ch
+    return result
+
+s = "(())((()))"
+print(remove_parantheses(s))
