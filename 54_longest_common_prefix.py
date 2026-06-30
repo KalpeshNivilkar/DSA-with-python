@@ -34,4 +34,5 @@ def long_common_prefix(strs):
 strs = ["flower","flow","flight"]
 print(long_common_prefix(strs))
        
-
+#def long common prefix
+#def dbd
