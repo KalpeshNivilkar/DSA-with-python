@@ -1,4 +1,4 @@
-# """def re_num(num):
+'''# """def re_num(num):
 #     if num > 10:   # correct base case
 #         return
 #     print(num)
@@ -137,4 +137,19 @@ def print1ton(i, n):
         return
     print(i)
     print1ton(i+1,n)
-print1ton(1,10)
+print1ton(1,10)'''
+
+def reverse_arr(arr, left, right):
+    if left >= right:
+        return arr
+
+    arr[left], arr[right] = arr[right], arr[left]
+
+    return reverse_arr(arr, left + 1, right - 1)
+
+
+arr = [2, 4, 5, 2]
+print(reverse_arr(arr, 0, len(arr) - 1))
+        
+        
+    
