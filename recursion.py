@@ -139,7 +139,7 @@ def print1ton(i, n):
     print1ton(i+1,n)
 print1ton(1,10)'''
 
-def reverse_arr(arr, left, right):
+'''def reverse_arr(arr, left, right):
     if left >= right:
         return arr
 
@@ -149,7 +149,25 @@ def reverse_arr(arr, left, right):
 
 
 arr = [2, 4, 5, 2]
-print(reverse_arr(arr, 0, len(arr) - 1))
+print(reverse_arr(arr, 0, len(arr) - 1))'''
+
+# using single pointer 
+def sorted_arr(arr,i):
+    n = len(arr)
+    if i >= n // 2:
+        return arr
+    arr[i],arr[n-i-1] = arr[n-i-1], arr[i]
+    return sorted_arr(arr,i+1)
+    
+   
+arr = [2,4,5,2]
+print(sorted_arr(arr,0))
+    
+    
+
+
+
+
         
         
     
