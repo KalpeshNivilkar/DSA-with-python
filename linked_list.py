@@ -50,7 +50,7 @@ print(ll.head.next.next)
 
 # practice
 # how create a node 
-class Node:
+'''class Node:
     def __init__ (self,val):
         self.val = val
         self.next = None
@@ -85,8 +85,43 @@ while current:
 
 
 
+
+
+
+
+
         
 
     
 
+
+'''
+
+# practice 
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
+class singlyLinkedList:
+    def __init__(self):
+        self.head = None
+# append new node in singly linked list 
+    def __init__(self,val):
+        new_node = Node(val)
+        if not self.head:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None:
+                current = current.next
+            current.next = current
+sll = singlyLinkedList()
+
+sll.append(10)
+sll.append(20)
+
+current = sll.head
+while current:
+    print(current.val, end="->")
+    current = current.next
 
