@@ -14,7 +14,6 @@ node3.next = node4
 
 print(node1.next.val)'''
 
-'''# singly linked list, append method
 class Node:
     def __init__(self, val):
         self.val = val
@@ -25,103 +24,99 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
+    # Append a node at the end
     def append(self, val):
         new_node = Node(val)
 
+        # If the list is empty
         if self.head is None:
             self.head = new_node
-        else:
-            curr = self.head
+            return
 
-            while curr.next is not None:
-                curr = curr.next
+        # Traverse to the last node
+        current = self.head
+        while current.next is not None:
+            current = current.next
 
-            curr.next = new_node
-ll = SinglyLinkedList()
-ll.append(10)
-ll.append(20)
-print(ll.head.val)            # 10
-print(ll.head.next.val)       # 20
-print(ll.head.next.next) 
-        
+        # Link the new node
+        current.next = new_node
 
+    # Traverse and print the list
+    def traverse(self):
+        if self.head is None:
+            print("The list is empty.")
+            return
 
-        '''
+        current = self.head
 
-# practice
-# how create a node 
-'''class Node:
-    def __init__ (self,val):
-        self.val = val
-        self.next = None
-# singlay linked list 
-class singlyLinkedList:
-    def __init__ (self):
-        self.head = None
+        while current is not None:
+            print(current.val, end=" -> ")
+            current = current.next
 
-    def append(self,val):
+        print("None")
+# insert at the head and insert at particular position 
+    def insert(self,val,position):
         new_node = Node(val)
-        if not self.head:
+        if position == 0:
+            new_node.next = self.head
             self.head = new_node
         else:
             current = self.head
-            while current.next is not None:
+            prev_node = None
+            count = 0
+
+            while current is not None and count < position:
+                prev_node = current
                 current = current.next
-            current.next = new_node
-ll = singlyLinkedList()
+                count += 1
+            if count != position:
+                print("Position out of range")
+                return
 
-# Append nodes
-ll.append(10)
-ll.append(20)
-ll.append(30)
-
-
-current = ll.head
-
-while current:
-    print(current.val, end="->")
-    current = current.next
-
-
-
-
-
-
-
-
-
-        
-
+            new_node.next = current
+            prev_node.next = new_node
+# delete the head from list 
+    def delete_head(self):
+        if not self.head:
+            print("cant delete the head because the list is empty.")
+        else:
+            self.head = self.head.next       # The second node (or None) becomes the new head
     
-
-
-'''
-
-# practice 
-class Node:
-    def __init__(self,val):
-        self.val = val
-        self.next = None
-class singlyLinkedList:
-    def __init__(self):
-        self.head = None
-# append new node in singly linked list 
-    def __init__(self,val):
-        new_node = Node(val)
-        if not self.head:
-            self.head = new_node
+# deleting a node by a value 
+    def delete(self,val):
+        current = self.head
+        if current.val == val:
+            self.head = current.next
+            return
         else:
-            current = self.head
-            while current.next is not None:
+            prev_node = None
+            found = False
+
+            while current is not None:
+                if current.val == val:
+                    found = True
+                    break
+                prev_node = current
                 current = current.next
-            current.next = current
-sll = singlyLinkedList()
+            
+            if found:
+                prev_node.next = current.next
+            else:
+                print("Node is not found!")
+
+
+# Driver Code
+sll = SinglyLinkedList()
 
 sll.append(10)
 sll.append(20)
+sll.append(30)
+sll.append(40)
 
-current = sll.head
-while current:
-    print(current.val, end="->")
-    current = current.next
+print("Before Deletion:")
+sll.traverse()
 
+sll.delete(30)
+
+print("After Deletion:")
+sll.traverse()
