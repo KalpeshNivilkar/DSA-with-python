@@ -12,3 +12,7 @@ def count_digit(num):
     return freq
 num = 121
 print(count_digit(num))
+
+
+
+# done 
