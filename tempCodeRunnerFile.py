@@ -1,84 +1,96 @@
-"""
-# def isPalindrome(x):
-        
-        
-#     if x < 0:
-#         return False
-        
-#     original = x
-#     reversed_num = 0
-        
-#     while x > 0:
-#         digit = x % 10
-#         reversed_num = reversed_num * 10 + digit
-#         x = x // 10
-        
-#     return original == reversed_num
-# print(isPalindrome(121))
+"""def isArmstrongNumber(num):
+#     summ = 0
+#     order = len(str(num))
+#     temp = num   # store original value
 
+#     while temp > 0:
+#         digit = temp % 10
+#         summ += digit ** order
+#         temp //= 10
 
+#     return summ == num
 
-# def palindrome(n):
-#     if n < 0:
-#         return False
+# print(isArmstrongNumber(153))
+
+# def isArmstrongNumber(num):
+#     summ = 0
+#     order = len(str(num))
+#     temp = num
+
+#     while temp > 0:
+#         digit = temp % 10
+#         summ += digit ** order
+#         temp //= 10
     
-#     original = n
-#     rev_num = 0
-#     while n > 0:
-#         digit = n % 10
-#         rev_num = rev_num * 10 + digit
-#         n = n // 10
-#     return original == rev_num
-# print(palindrome(29))"""
+#     return summ == num
 
-# def ispalindrome(num):
-#     og_number = num
-#     rev_number = 0
+# print(isArmstrongNumber(153))
+    
+
+
+# def isArmstrongNumber(num):
+#     summ = 0
+#     power = len(str(num))
+#     temp = num
+
+#     while temp > 0:
+#         digit = temp % 10
+#         summ += digit ** power
+#         temp //= 10
+#     return(summ == num)
+
+# print(isArmstrongNumber(153))"""
+
+
+# def armstrong_num(num):
+#     og_num = num
+#     sum = 0
+#     power = len(str(num))
 #     if num <= 0:
 #         return False
 #     while num > 0:
 #         digit = num % 10
-#         rev_number = rev_number * 10 + digit
+#         sum = sum + digit ** power
 #         num = num // 10
-    
-#     if rev_number == og_number:
+#     if og_num == sum:
 #         return True
 #     return False
-# num = 121
-# print(ispalindrome(num))
+# num = 371
+# print(armstrong_num(num))
 
 
-# def is_palindrome(num):
+# def armstrong_num(num):
+#     n = len(str(num))
+#     power = n
 #     og_num = num
-#     rev_num = 0
+#     sum = 0
+#     while num > 0:
+#         last_digit = num % 10
+#         sum += last_digit ** power
+#         num = num // 10
+#     if sum == og_num:
+#         return True
+#     return False
+# num = 153
+# print(armstrong_num(num))
+        
+
+
+
+# # armstrong  number
+# def is_armstong_number(num):
+#     og_num = num
+#     arm = 0
+#     n = len(str(num))
+#     power = n
 
 #     while num > 0:
 #         last_digit = num % 10
-#         rev_num = rev_num * 10 + last_digit
-#         num = num // 10
-#     if rev_num == og_num:
-#         return True
-#     return False
-
-# num = 1213
-# print(is_palindrome(num))
-
-
-
-
-# # palindrome number
-
-# def is_palindrome(num):
-#     og_num = num
-#     rev_num = 0
-
-#     while num > 0:
-#         last_digit = num % 10
-#         rev_num = rev_num * 10 + last_digit
+#         arm += last_digit ** n
 #         num = num // 10
     
-#     if rev_num == og_num:
+#     if og_num == arm:
 #         return True
 #     return False
-# num = 121
-# print(is_palindrome(num)) 
+# num = 153
+# print(is_armstong_number(num))

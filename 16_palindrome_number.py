@@ -106,7 +106,7 @@
 
 
 num = 121
-rev_num = reversed(str(num))
+rev_num = ''.join(reversed(str(num)))
 
 if num == rev_num:
     print(True)
