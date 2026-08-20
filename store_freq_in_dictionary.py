@@ -1,4 +1,4 @@
-# store frequency
+'''# store frequency
 
 def store_freq(nums):
     n = len(nums)
@@ -52,6 +52,33 @@ def sec_method(nums):
     return freq_map
 nums = [1,2,3,1,1,1,1,2,2,1,1]
 print(sec_method(nums))
-
+'''
 
      
+
+
+def store_freq(nums):
+    my_dict = {}
+    n = len(nums)
+
+    for i in range(n):
+        if nums[i] in my_dict:
+            my_dict[nums[i]] += 1
+        else:
+            my_dict[nums[i]] = 1
+    return my_dict
+nums = [10,21,21,21,11]
+print(store_freq(nums))
+
+
+
+# second method 
+def store_freq(nums):
+    my_table = {}
+    n = len(nums)
+
+    for i in range(n):
+        my_table[nums[i]] = my_table.get(nums[i],0) +1
+    return my_table
+nums = [10,21,21,21,11]
+print(store_freq(nums))
