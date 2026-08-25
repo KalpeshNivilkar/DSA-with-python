@@ -168,6 +168,3 @@ print(sorted_arr(arr,0))
 
 
 
-        
-        
-    
