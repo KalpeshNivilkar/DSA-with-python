@@ -9,7 +9,7 @@ arr = [10,23,12,43,55,22]
 print(bubble_sort(arr))"""
 
 
-
+#bubble sort
 def bubble_sort(nums):
     n = len(nums)
     for i in range(n-1):
