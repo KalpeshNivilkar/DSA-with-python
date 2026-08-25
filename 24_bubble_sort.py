@@ -20,3 +20,5 @@ def bubble_sort(nums):
 
 nums = [10,39,22,40,12]
 print(bubble_sort(nums))
+
+# done
