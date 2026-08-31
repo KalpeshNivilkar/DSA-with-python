@@ -22,3 +22,17 @@ nums = [10,39,22,40,12]
 print(bubble_sort(nums))
 
 # done
+
+
+
+def bubble(nums):
+    n = len(nums)
+
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if nums[j] > nums[j+1]:
+                nums[j], nums[j+1] = nums[j+1], nums[j]
+
+    return nums
+nums = [10,19,20,11]
+print(bubble(nums))
