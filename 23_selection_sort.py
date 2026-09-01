@@ -108,3 +108,34 @@ def selection_sort(nums):
     return nums
 nums = [10,20,9,11]
 print(selection_sort(nums))
+
+#brute force approach
+def selection_sort2(nums):
+    n = len(nums)
+    for i in range(n):
+        for j in range(i+1,n):
+            if nums[i] > nums[j]:
+                nums[i], nums[j] = nums[j],nums[i]
+    return nums           
+nums = [10,20,9,11]
+print(selection_sort2(nums))
+
+#quite optimize approach
+
+def selection_sort3(nums):
+    n = len(nums)
+    for i in range(n):
+        min_idx = i  #0idx = 10
+
+        for j in range(i +1, n):
+            if nums[j] < nums[min_idx]: #20 < 10
+                min_idx = j  # 1idx = 20
+        nums[i], nums[min_idx] = nums[min_idx], nums[i]
+    return nums
+
+
+
+
+
+nums = [10,20,9,11]
+print(selection_sort3(nums))
