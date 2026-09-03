@@ -1,4 +1,4 @@
-"""def merge_sort(arr):
+'''"""def merge_sort(arr):
     if len(arr) <= 1:
         return arr
 
@@ -98,4 +98,51 @@ def merge_array(left, right):
             j += 1
     return result
 arr =[ 4,8,9,3,4]
-print(merge_sort(arr))
+print(merge_sort(arr))'''
+
+
+
+def merge_sort1(arr):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+
+    left = merge_sort1(arr[:mid])
+    right = merge_sort1(arr[mid:])
+
+    return merge1(left, right)
+
+
+def merge1(left, right):
+    LR_list = []
+    i = 0
+    j = 0
+
+    n = len(left)
+    m = len(right)
+
+    while i < n and j < m:
+        if left[i] < right[j]:
+            LR_list.append(left[i])
+            i += 1
+        else:
+            LR_list.append(right[j])
+            j += 1
+
+    while i < n:
+        LR_list.append(left[i])
+        i += 1
+
+    while j < m:
+        LR_list.append(right[j])
+        j += 1
+
+    return LR_list
+
+
+arr = [4, 8, 9, 3, 4]
+print(merge_sort1(arr))
+
+
+

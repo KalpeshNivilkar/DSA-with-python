@@ -1,96 +1,101 @@
-"""def isArmstrongNumber(num):
-#     summ = 0
-#     order = len(str(num))
-#     temp = num   # store original value
+"""def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
 
-#     while temp > 0:
-#         digit = temp % 10
-#         summ += digit ** order
-#         temp //= 10
+    mid = len(arr) // 2
 
-#     return summ == num
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
 
-# print(isArmstrongNumber(153))
+    return merge(left, right)
 
-# def isArmstrongNumber(num):
-#     summ = 0
-#     order = len(str(num))
-#     temp = num
 
-#     while temp > 0:
-#         digit = temp % 10
-#         summ += digit ** order
-#         temp //= 10
+def merge(left, right):
+    result = []
+    i = 0
+    j = 0
+    l = len(left)
+    r = len(right)
+
+    while i < l and j < r:
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
+
+    return result
+
+
+arr = [5, 3, 4, 1]
+print(merge_sort(arr))"""
+
+
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+
+    return merge_array(left,right)
+
+def merge_array(left,right):
+    i = 0
+    j = 0
+    result = []
+    l = len(left)
+    r = len(right)
+    while i < l and j < r:
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
     
-#     return summ == num
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+arr =[ 4,8,9,3,4]
+print(merge_sort(arr))
 
-# print(isArmstrongNumber(153))
+
+
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[: mid])
+    right = merge_sort(arr[mid :])
+    return merge_array(left,right)
+
+def merge_array(left, right):
+    result = []
+    i,j = 0, 0
+    n = len(left)
+    m = len(right)
     
-
-
-# def isArmstrongNumber(num):
-#     summ = 0
-#     power = len(str(num))
-#     temp = num
-
-#     while temp > 0:
-#         digit = temp % 10
-#         summ += digit ** power
-#         temp //= 10
-#     return(summ == num)
-
-# print(isArmstrongNumber(153))"""
-
-
-# def armstrong_num(num):
-#     og_num = num
-#     sum = 0
-#     power = len(str(num))
-#     if num <= 0:
-#         return False
-#     while num > 0:
-#         digit = num % 10
-#         sum = sum + digit ** power
-#         num = num // 10
-#     if og_num == sum:
-#         return True
-#     return False
-# num = 371
-# print(armstrong_num(num))
-
-
-# def armstrong_num(num):
-#     n = len(str(num))
-#     power = n
-#     og_num = num
-#     sum = 0
-#     while num > 0:
-#         last_digit = num % 10
-#         sum += last_digit ** power
-#         num = num // 10
-#     if sum == og_num:
-#         return True
-#     return False
-# num = 153
-# print(armstrong_num(num))
-        
-
-
-
-# # armstrong  number
-# def is_armstong_number(num):
-#     og_num = num
-#     arm = 0
-#     n = len(str(num))
-#     power = n
-
-#     while num > 0:
-#         last_digit = num % 10
-#         arm += last_digit ** n
-#         num = num // 10
+    while i < n and j < m :
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
     
-#     if og_num == arm:
-#         return True
-#     return False
-# num = 153
-# print(is_armstong_number(num))
+    if i < n:
+        while i < n:
+            result.append(left[i])
+            i += 1
+    if j < m:
+        while j < m:
+            result.append(right[j])
+            j += 1
+    return result
+arr =[ 4,8,9,3,4]
+print(merge_sort(arr))
