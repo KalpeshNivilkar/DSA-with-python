@@ -81,6 +81,6 @@ def insertion_sort4(arr):
             j -= 1
 
         arr[j +1] = key
-    return nums
+    return arr
 nums = [10,30,23,11]
 print(insertion_sort4(nums))
