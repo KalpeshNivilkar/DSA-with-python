@@ -12,7 +12,7 @@ print(is_sorted(arr))
 
 
 
-def check_array_is_sorted(nums):
+'''def check_array_is_sorted(nums):
     n = len(nums)
     for i in range(1, n):
         if nums[i] > nums[i+1]:
@@ -20,4 +20,17 @@ def check_array_is_sorted(nums):
         return True
 
 nums = [10,2030,20]
-print(check_array_is_sorted(nums))
+print(check_array_is_sorted(nums))'''
+
+
+
+def is_sorted(nums):
+    n = len(nums)
+
+    for i in range(1, n):
+        if nums[i-1] > nums[i]:
+            return False
+    return True
+
+nums = [10,20,43,11]
+print(is_sorted(nums))
