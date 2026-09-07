@@ -1,4 +1,4 @@
-"""def largestEl(arr):
+'''"""def largestEl(arr):
     j = 1
     for i in range(len(arr)):
         if arr[i] > arr[j]:
@@ -35,3 +35,26 @@ def largestEl(arr):
     return largest1
 arr = [55,32,97,99,3,67]
 print(largestEl(arr))
+'''
+
+
+
+def largest_ele(nums):
+    n = len(nums)
+    largets = 0
+    for i in range(n):
+        if nums[i] > largets:
+            largets = nums[i]
+    return largets
+nums = [10,30,28]
+print(largest_ele(nums))
+
+
+def largest_ele_max(nums):
+    n = len(nums)
+    large = nums[0]
+    for i in range(n):
+        large = max(nums[0],nums[i])
+    return large
+nums = [10,30,28]
+print(largest_ele(nums))

@@ -149,7 +149,7 @@ print(merge_sort1(arr))'''
 
 
 
-def merge(nums):
+'''def merge(nums):
     if len(nums) <= 1:
         return nums
     mid = len(nums) // 2
@@ -187,5 +187,45 @@ def merge_array(left,right):
 
 
 nums = [4, 8, 9, 3, 4]
+print(merge(nums))'''
+
+
+
+def merge(nums):
+    if len(nums) <= 1:
+        return nums
+    mid = len(nums) // 2
+    left = merge(nums[:mid])
+    right = merge(nums[mid:])
+
+    return merge_array(left,right)
+
+def merge_array(left, right):
+    merge_list = []
+    l = len(left)
+    r = len(right)
+    i = 0
+    j = 0
+
+    while i < l and j < r:
+        if left[i] < right[j]:
+            merge_list.append(left[i])
+            i += 1
+        else:
+            merge_list.append(right[j])
+            j += 1
+
+    if i < l:
+        while i < l:
+            merge_list.append(left[i])
+            i += 1
+
+    if j < r:
+        while j < r:
+            merge_list.append(right[j])
+            j += 1
+
+    return merge_list
+nums = [4, 8, 9, 3, 4]
 print(merge(nums))
-    
+
