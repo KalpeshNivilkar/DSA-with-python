@@ -34,3 +34,15 @@ def is_sorted(nums):
 
 nums = [10,20,43,11]
 print(is_sorted(nums))
+
+
+def is_sorted(nums):
+    n = len(nums)
+    for i in range(1,n):
+        if nums[i-1] > nums[i]:
+            return False
+    return True
+
+
+nums = [10,20,30,10]
+print(is_sorted(nums))
