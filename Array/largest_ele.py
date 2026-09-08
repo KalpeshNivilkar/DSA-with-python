@@ -58,3 +58,15 @@ def largest_ele_max(nums):
     return large
 nums = [10,30,28]
 print(largest_ele(nums))
+
+
+def largest_el(nums):
+    n = len(nums)
+    large = nums[0]
+
+    for i in range(n):
+        if nums[i] > large:
+            large = nums[i]
+    return large
+nums = [10,20,50,1]
+print(largest_el(nums))
