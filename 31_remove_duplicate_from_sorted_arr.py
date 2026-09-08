@@ -34,3 +34,27 @@ print(remove_duplicates(arr))
 
 
 
+
+
+
+def remove_duplicate(nums):
+    # n = len(nums)
+    new_list = set(nums)
+    return list(new_list)
+    
+
+nums = [10,20,30,40,40]
+print(remove_duplicate(nums))
+
+def remove_duplicates(nums):
+    n = len(nums)
+    i = 0
+
+    for j in range(1, n):
+        if nums[i] != nums[j]:
+            i+= 1
+            nums[i] = nums[j]
+    return nums[i+ 1]
+nums = [10,20,30,40,40]
+print(remove_duplicates(nums))
+
