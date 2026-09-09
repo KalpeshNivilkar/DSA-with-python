@@ -58,3 +58,14 @@ def remove_duplicates(nums):
 nums = [10,20,30,40,40]
 print(remove_duplicates(nums))
 
+
+
+# def remove_duplicate(nums):
+#     n = len(nums)
+#     i = 0
+
+#     for j in range(1,n):
+#         if nums[i] != nums[j]:
+#             i+= 1
+#             nums[i] = nums[j]
+#     return i + 1
