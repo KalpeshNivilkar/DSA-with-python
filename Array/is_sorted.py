@@ -46,3 +46,13 @@ def is_sorted(nums):
 
 nums = [10,20,30,10]
 print(is_sorted(nums))
+
+def is_sorted(nums):
+    n = len(nums)
+
+    for i in range(n):
+        if nums[i] <= nums[i+1]:
+            return True
+    return False
+nums = [10,30,49,20]
+print(is_sorted(nums))

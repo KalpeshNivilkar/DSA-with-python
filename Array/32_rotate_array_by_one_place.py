@@ -37,3 +37,15 @@ def rotate_array(nums):
     return nums
 nums = [10,30,29,28,12]
 print(rotate_array(nums))
+
+
+def rotate_arr_one_place(nums):
+    n = len(nums)
+    temp = n -1
+
+    for i in range(1,n):
+        nums[i-1] = nums[i]
+    nums[0] = nums[temp]
+    return nums
+nums = [10,30,29,28,12]
+print(rotate_arr_one_place(nums))

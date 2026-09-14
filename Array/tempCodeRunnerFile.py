@@ -1,1 +1,1 @@
-nums[i] = nums[j]
+  return nums
