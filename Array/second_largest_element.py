@@ -75,3 +75,18 @@ def second_large(nums):
     return sec_largest
 nums = [50,10,20,90]
 print(second_large(nums))
+
+def second_large(nums):
+    n = len(nums)
+    largest = nums[0]
+    sec_larg = nums[0]
+
+    for i in range(1,n):
+        largest = max(largest, nums[i])
+
+    for i in range(1,n):
+        if nums[i] != largest and nums[i] > sec_larg:
+            sec_larg = nums[i]
+    return sec_larg
+nums = [10,30,49,45]
+print(second_large(nums))
