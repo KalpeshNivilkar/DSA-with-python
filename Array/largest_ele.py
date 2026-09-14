@@ -70,3 +70,16 @@ def largest_el(nums):
     return large
 nums = [10,20,50,1]
 print(largest_el(nums))
+
+
+
+def largest_element(nums):
+    n = len(nums)
+    largest_el = nums[0]
+
+    for i in range(1,n):
+        largest_el= max(largest_el,nums[i])
+    return largest_el
+
+nums = [10,20,10,39]
+print(largest_element(nums))

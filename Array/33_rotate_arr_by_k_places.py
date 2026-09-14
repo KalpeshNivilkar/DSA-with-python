@@ -8,3 +8,6 @@ def rorate_arr(arr):
 arr = [10,23,44,22]
 print(rorate_arr(arr))
 
+
+
+
