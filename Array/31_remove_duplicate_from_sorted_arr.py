@@ -69,3 +69,24 @@ print(remove_duplicates(nums))
 #             i+= 1
 #             nums[i] = nums[j]
 #     return i + 1
+
+
+
+
+
+
+def remove_duplicates(nums):
+    hash_table = {}
+    
+    n = len(nums)
+    for i in range(n):
+        if nums[i] in hash_table:
+            hash_table[nums[i]] -= 1
+        else:
+            hash_table[nums[i]] = 1
+
+    return list(hash_table)
+            
+    
+nums = [1,1,1,3,4,5,6]
+print(remove_duplicates(nums))
