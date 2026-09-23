@@ -1,0 +1,268 @@
+''''''"""def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+
+    return merge(left, right)
+
+
+def merge(left, right):
+    result = []
+    i = 0
+    j = 0
+    l = len(left)
+    r = len(right)
+
+    while i < l and j < r:
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
+
+    return result
+
+
+arr = [5, 3, 4, 1]
+print(merge_sort(arr))"""
+
+
+'''def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+
+    return merge_array(left,right)
+
+def merge_array(left,right):
+    i = 0
+    j = 0
+    result = []
+    l = len(left)
+    r = len(right)
+    while i < l and j < r:
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+arr =[ 4,8,9,3,4]
+print(merge_sort(arr))
+
+
+
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[: mid])
+    right = merge_sort(arr[mid :])
+    return merge_array(left,right)
+
+def merge_array(left, right):
+    result = []
+    i,j = 0, 0
+    n = len(left)
+    m = len(right)
+    
+    while i < n and j < m :
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    
+    if i < n:
+        while i < n:
+            result.append(left[i])
+            i += 1
+    if j < m:
+        while j < m:
+            result.append(right[j])
+            j += 1
+    return result
+arr =[ 4,8,9,3,4]
+print(merge_sort(arr))
+
+def merge_sort1(arr):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+
+    left = merge_sort1(arr[:mid])
+    right = merge_sort1(arr[mid:])
+
+    return merge1(left, right)
+
+
+def merge1(left, right):
+    LR_list = []
+    i = 0
+    j = 0
+
+    n = len(left)
+    m = len(right)
+
+    while i < n and j < m:
+        if left[i] < right[j]:
+            LR_list.append(left[i])
+            i += 1
+        else:
+            LR_list.append(right[j])
+            j += 1
+
+    while i < n:
+        LR_list.append(left[i])
+        i += 1
+
+    while j < m:
+        LR_list.append(right[j])
+        j += 1
+
+    return LR_list
+
+
+arr = [4, 8, 9, 3, 4]
+print(merge_sort1(arr))
+
+def merge(nums):
+    if len(nums) <= 1:
+        return nums
+    mid = len(nums) // 2
+    left = merge(nums[:mid])
+    right = merge(nums[mid:])
+
+    return merge_array(left,right)
+
+def merge_array(left,right):
+    merge_list = []
+    l = len(left)
+    r = len(right)
+    i = 0
+    j = 0
+
+    while i < l and j < r:
+        if left[i] < right[j]:
+            merge_list.append(left[i])
+            i += 1
+        else:
+            merge_list.append(right[j])
+            j += 1
+
+    if i < l:
+        while i < l:
+            merge_list.append(left[i])
+            i += 1
+
+    if j < r:
+        while j < r:
+            merge_list.append(right[j])
+            j += 1
+
+    return merge_list
+
+
+nums = [4, 8, 9, 3, 4]
+print(merge(nums))'''
+'''
+
+
+
+def merge(nums):
+    if len(nums) <= 1:
+        return nums
+    mid = len(nums) // 2
+    left = merge(nums[:mid])
+    right = merge(nums[mid:])
+
+    return merge_array(left,right)
+
+def merge_array(left, right):
+    merge_list = []
+    l = len(left)
+    r = len(right)
+    i = 0
+    j = 0
+
+    while i < l and j < r:
+        if left[i] < right[j]:
+            merge_list.append(left[i])
+            i += 1
+        else:
+            merge_list.append(right[j])
+            j += 1
+
+    if i < l:
+        while i < l:
+            merge_list.append(left[i])
+            i += 1
+
+    if j < r:
+        while j < r:
+            merge_list.append(right[j])
+            j += 1
+
+    return merge_list
+nums = [4, 8, 9, 3, 4]
+print(merge(nums))'''
+
+
+
+def merge(nums):
+    n = len(nums)
+    if len(nums) <= 1:
+        return nums
+    mid = n // 2
+
+    left = merge(nums[:mid])
+    right = merge(nums[mid:])
+
+    return merge_array(left, right)
+
+def merge_array(left, right):
+    result = []
+    i = 0
+    j = 0
+    l = len(left)
+    r = len(right)
+
+    while i < l and j < r:
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    while i < l:
+        result.append(left[i])
+        i += 1
+
+    while j < r:
+        result.append(right[j])
+        j += 1
+
+    return result
+nums = [4, 8, 9, 3, 4]
+print(merge(nums))
+
+        
+
+    
