@@ -40,3 +40,33 @@ class solution:
 
 nums = [10,20,30,40]
 print(rotate(nums,2))
+
+
+# practice brute_force_approach
+def rotate_arr(nums,k):
+    n = len(nums)
+    rotations = k % n
+
+    for _ in range(rotations):
+        last = nums.pop()
+        nums.insert(0,last)
+    return nums
+nums = [10,20,30,40]
+print(rotate(nums,2))
+
+
+# optimal approach
+def reverse_arr(nums,left,right):
+    while left < right:
+        nums[left], nums[right] = nums[right], nums[left]
+        left += 1
+        right -= 1
+
+def rotate(nums,k):
+    n = len(nums)
+    k = k % n
+    reverse_arr(nums,n-k, n-1)
+    reverse_arr(nums,0,n-k-1)
+    reverse_arr(nums,0,n-1)
+nums = [10,20,30,40]
+print(rotate(nums,2))

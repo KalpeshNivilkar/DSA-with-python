@@ -1,1 +1,2 @@
-  return nums
+
+def rotate(self,nums,k):
