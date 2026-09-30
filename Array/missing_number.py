@@ -29,3 +29,11 @@ def missing_num1(nums):
             return i
 nums = [3,0,1,2,4]
 print(missing_num1(nums))
+
+# optimal solution
+def missing_num2(nums):
+    n = len(nums)
+    actual_toatal = (n * (n + 1) // 2)
+    return actual_toatal - sum(nums)
+nums = [3,0,1,2,4]
+print(missing_num2(nums))
