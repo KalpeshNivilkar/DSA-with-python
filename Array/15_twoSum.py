@@ -63,3 +63,17 @@ def two_sum(nums,target):
 num = [2,7,11,15]
 target = 9
 print(two_sum(num,target))
+
+def two_sum_2(nums,target):
+    n = len(nums)
+    hash_map = {}
+
+    for i in range(n):
+        remaining = target - nums[i]
+        if remaining in hash_map:
+            return [ hash_map[remaining],i]
+        hash_map[nums[i]] = i
+    return []
+nums = [2,7,11,15]
+target = 9
+print(two_sum_2(nums,target))
