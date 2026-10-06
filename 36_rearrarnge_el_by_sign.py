@@ -61,4 +61,58 @@ print(rearrange_arr(arr))
   
 
    
-    
+# brute force approach
+  
+def rearrage_num_by_sign(nums):
+    sort_num = sorted(nums)
+    n = len(sort_num)
+    pos_el = []
+    neg_el = []
+
+    for i in range(n):
+        if sort_num[i] > 0:
+            pos_el.append(sort_num[i])
+        else:
+            neg_el.append(sort_num[i])
+
+    return arrange_num(pos_el, neg_el)
+
+def arrange_num(pos_el,neg_el):
+    final_list = []
+    i = 0
+    j = 0
+    p = len(pos_el)
+    n = len(neg_el)
+
+    while i < p and j < n:
+        final_list.append(pos_el[i])
+        i += 1
+        final_list.append(neg_el[j])
+        j += 1
+
+    return final_list
+        
+nums = [-2, 3, 4, -1]
+print(rearrage_num_by_sign(nums))
+
+# optimal approach
+print("this is optimal solution...")
+
+def rearrange_num(nums):
+    n = len(nums)
+    result = [0] * n
+    pos_idx = 0
+    neg_idx = 1
+
+    for el in nums:
+        if el >= 0:
+            result[pos_idx] = el
+            pos_idx += 2
+        else:
+            result[neg_idx] = el
+            neg_idx += 2
+        
+    return result
+
+nums = [-2, 3, 4, -1]
+print(rearrange_num(nums))
