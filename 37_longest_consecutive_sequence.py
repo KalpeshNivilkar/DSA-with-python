@@ -34,3 +34,26 @@ def longest_consecutive(nums):
     
 nums = [1,99,101,98,2,5,3,100]
 print(longest_consecutive(nums))
+
+print("better solution")
+
+def long_consecutive(nums):
+    nums.sort()
+    n = len(nums)
+    smallest_num = float('-inf')
+    count = 0
+    longest = 0
+
+    for i in range(n):
+        num = nums[i]
+        if num -1 == smallest_num:
+            count += 1
+            smallest_num = num
+
+        elif num -1 != smallest_num:
+            count = 1
+            smallest_num = num
+        longest = max(count, longest)
+    return longest
+nums = [1,99,101,98,2,5,3,100]
+print(long_consecutive(nums))
