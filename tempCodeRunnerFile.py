@@ -1,1 +1,1 @@
-n = len(nums)
+count = 0
