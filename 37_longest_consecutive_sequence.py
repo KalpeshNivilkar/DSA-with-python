@@ -57,3 +57,26 @@ def long_consecutive(nums):
     return longest
 nums = [1,99,101,98,2,5,3,100]
 print(long_consecutive(nums))
+
+
+print("optimal approach")
+def long_cons(nums):
+    n = len(nums)
+    my_set = set()
+
+    for i in range(n):
+        my_set.add(nums[i])
+
+    longest = 0
+    for num in my_set:
+        if num -1 not in my_set:
+            current = num
+            count = 1
+
+            while current + 1 in my_set:
+                count += 1
+                current = current + 1
+            longest = max(longest, count)
+    return longest
+nums = [1,99,101,98,2,5,3,100]
+print(long_cons(nums))

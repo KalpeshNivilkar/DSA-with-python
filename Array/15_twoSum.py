@@ -71,7 +71,7 @@ def two_sum_2(nums,target):
     for i in range(n):
         remaining = target - nums[i]
         if remaining in hash_map:
-            return [ hash_map[remaining],i]
+            return [hash_map[remaining],i]
         hash_map[nums[i]] = i
     return []
 nums = [2,7,11,15]
