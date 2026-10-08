@@ -13,3 +13,8 @@ for i in range(rows):
         else:
             print("*", end=" ")
     print()
+
+# output
+# 10 * * 
+# 40 50 * 
+# 70 80 90 

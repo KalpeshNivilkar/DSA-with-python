@@ -10,4 +10,4 @@ sum = 0
 for i in range(rows):
     for j in range(cols):
         sum += nums[i][j]
-print(sum)
+print(sum)   #output: 450
