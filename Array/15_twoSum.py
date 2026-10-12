@@ -77,3 +77,20 @@ def two_sum_2(nums,target):
 nums = [2,7,11,15]
 target = 9
 print(two_sum_2(nums,target))
+
+
+
+def two_sum(nums, target):
+    n = len(nums)
+    i = 0
+    j = n-1
+
+    while i < j:
+        if nums[i] +nums[j] != target:
+            j-= 1
+        else:
+            return i, j
+  
+nums = [2,7,11,15]
+target = 9
+print(two_sum(nums,target))
