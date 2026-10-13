@@ -88,3 +88,31 @@ nums = [
 set_matrix_zero(nums)
 print(nums)
 
+
+
+
+def set_matrix_zero(nums):
+    row = len(nums)
+    col = len(nums[0])
+
+    row_track = [([0] * row) for _ in range(col)]
+    col_track = [([0]* col) for _ in range(row)]
+
+    for i in range(row):
+        for j in range(col):
+            if nums[i][j] == 0:
+                row_track[i] = -1
+                col_track[j] = -1
+
+    for i in range(row):
+        for j in range(col):
+            if row_track[i] == -1 or col_track[j] == -1:
+                nums[i][j] = 0
+    return nums
+    
+nums = [
+    [1, 2, 0],
+    [4, 5, 6],
+    [7, 0, 9]
+]
+print(set_matrix_zero(nums))

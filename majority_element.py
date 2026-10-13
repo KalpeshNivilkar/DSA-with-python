@@ -14,4 +14,13 @@ def majority_element(num):
 
 arr = [1,2,2,2,2,2,2,3,1,1,1,2]
 print("the majority element is :", majority_element(arr))
-        
+
+
+
+def majorityElement( nums):
+    n = len(nums)
+    hash_table = {}
+
+    for i in range(n):
+        hash_table[nums[i]] = hash_table.get(nums[i], 0)+ 1
+    return max(hash_table, key = hash_table.get)
