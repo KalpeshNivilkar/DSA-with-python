@@ -86,11 +86,13 @@ def two_sum(nums, target):
     j = n-1
 
     while i < j:
-        if nums[i] +nums[j] != target:
+        if nums[i] + nums[j] != target:
             j-= 1
         else:
-            return i, j
+            return [i, j]
   
 nums = [2,7,11,15]
 target = 9
 print(two_sum(nums,target))
+
+
