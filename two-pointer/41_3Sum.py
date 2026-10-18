@@ -36,5 +36,42 @@ def threeSum(arr):
 arr = [1,2,1,2,1,-1,-2,-1,0,0,0,1]
 print(threeSum(arr))
                 
-# optimize approach
+# brute force approach
+
+print("this is brute force solution")
+def three_sum(nums):
+    n = len(nums)
+    my_set = set()
+
+    for i in range(n):
+        for j in range(i+1,n):
+            for k in range(j+1,n):
+                if nums[i]+ nums[j]+ nums[k] == 0:
+                    temp = [nums[i],nums[j],nums[k]]
+                    temp.sort()
+                    my_set.add(tuple(temp))
+    return[list(ans) for ans in my_set]
+nums = [1,2,1,2,1,-1,-2,-1,0,0,0,1]
+print(three_sum(nums))
+
+# brute force approach
+
+print("this is brute force solution")
+def three_sum(nums):
+    n = len(nums)
+    my_Set = set()
+
+    for i in range(n):
+        for j in range(i+1,n):
+            for k in range(j+1,n):
+                if nums[i]+ nums[j]+ nums[k] == 0:
+                    temp = [nums[i], nums[j], nums[k]]
+                    temp.sort()
+                    my_Set.add(tuple(temp))
+
+    return [list(ans) for ans in my_Set]
+nums = [1,2,1,2,1,-1,-2,-1,0,0,0,1]
+print(three_sum(nums))
+
+
     
